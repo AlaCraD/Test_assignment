@@ -3,12 +3,6 @@
 #include "ISKRA_Buff.h"
 
 
-//__int8* rere(char TRK_No[2]) {
-//	__int8 mass[8];
-//
-//	return mass;
-//}
-
 int main() {
 	char mass[27];
 	__int8	TRK_No[2] = {'1','2'},
