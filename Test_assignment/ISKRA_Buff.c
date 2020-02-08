@@ -3,8 +3,8 @@
 void* ISKRABuffAssemble(void* MemoryForBuffer, __int8* TRK_No, __int8 Command, __int8* price, __int8* volume, __int8* error, __int8* code) {
 	//__int8* MemoryForBuffer = MemoryForBuffer;
 	__int8 i;
-	*((__int8*) (MemoryForBuffer)) = 0x01;					// SOH
-	*(((__int8*)MemoryForBuffer) + 3) = (__int8)Command;			// Command
+	*((__int8*) MemoryForBuffer) = 0x01;					// SOH
+	*(((__int8*)MemoryForBuffer) + 3) = Command;				// Command
 	*(((__int8*)MemoryForBuffer) + 4) = 0x02;				// STX
 	for (i = 0; i < 6; i++) {
 		*(((__int8*)MemoryForBuffer) + 5 +i) = *(price  + i);		// Price
