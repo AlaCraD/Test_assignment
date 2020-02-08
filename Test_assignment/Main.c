@@ -5,18 +5,17 @@
 
 
 int main() {
-	char mass[27];
-	void* buff = (__int8*)malloc(27);
-	__int8	TRK_No[2] = {'1','2'},
-			Command = '5',
-			price[6] = { 'p','r','i','c','e','!' },
-			volume[6] = {'v','o','l','u','m','e'},
-			status[4] = {'s','t','u','s'},
-			error[2] = {'r','r'},
-			code[2] = {'c','d'};
-	__int8* df = ISKRABuffAssemble(buff, TRK_No, Command, price, volume, error, code);
+	char mass[23];
+	void* buff = (__int8*)malloc(23);
+	__int8	TRK_No = 12,
+			Command = 5,
+			error = 34,
+			code = 65;
+	__int32 price = 123456,
+			volume = 987654;
+	__int8 df = ISKRABuffAssemble(buff, TRK_No, Command, price, volume, error, code);
 	int count = 0;
-	while (count < 27) {
+	while (count < 23) {
 		printf("%c ", *((__int8*)buff + (int)count));
 		count++;
 		
